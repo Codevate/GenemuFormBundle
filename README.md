@@ -1,10 +1,9 @@
 # FormBundle
-
-[![Build Status](https://secure.travis-ci.org/genemu/GenemuFormBundle.png)](https://travis-ci.org/genemu/GenemuFormBundle)
+Forked version of the genemu/form-bundle which is compatible with PHP7 and Symfony 3.4.
 
 ## Installation
 
-Installation is quick and easy, 3 steps process
+Installation is quick and easy 3 step process:
 
 1. Install GenemuFormBundle
 2. Enable the bundle
@@ -12,12 +11,26 @@ Installation is quick and easy, 3 steps process
 
 ### Step 1: Install GenemuFormBundle
 
-Run the following command :
-
-``` bash
-$ composer require benschumi/form-bundle "^3.0@dev"
+To use this version of the Genemu Form Bundle, add the following to your `composer.json`:
+```
+"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Codevate/GenemuFormBundle"
+        }
+],
 ```
 
+And then require the bundle itself:
+```$xslt
+"require": {
+        "php": ">=7.1",
+        "symfony/symfony": "~3.4",
+        "genemu/form-bundle": "dev-master",
+        ...
+},
+```
+Afterwards you should be able to run `composer update` to download this version of the bundle.
 ### Step 2: Enable the bundle
 
 Finally, enable the bundle in the kernel:
@@ -38,7 +51,7 @@ public function registerBundles()
 ### Step 3: Initialize assets
 
 ``` bash
-$ php app/console assets:install web/
+$ php bin/console assets:install web/
 ```
 
 ## Form types
@@ -78,7 +91,3 @@ Maybe you have forgotten ``form_javascript`` or ``form_stylesheet``.
 The principle is to separate the javascript, stylesheet and html. This allows better integration of web pages.
 
 [View a template example form view](https://github.com/genemu/GenemuFormBundle/blob/master/Resources/doc/template.md)
-
-## Note
-
-There are maybe some bugs in those implementations, this package is just an idea of form types which can be very useful for your Symfony2 projects.

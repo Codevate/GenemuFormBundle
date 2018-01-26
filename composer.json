@@ -16,6 +16,10 @@
         {
             "name": "Community contributions",
             "homepage": "https://github.com/genemu/GenemuFormBundle/contributors"
+        },
+        {
+            "name": "Sylvester Saracevas",
+            "email": "saracevass@gmail.com"
         }
     ],
     "require": {
