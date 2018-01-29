@@ -89,4 +89,5 @@ class Select2ChoiceType extends AbstractType
     {
         return $this->getBlockPrefix();
     }
+
 }

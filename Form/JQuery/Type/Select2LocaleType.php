@@ -84,4 +84,10 @@ class Select2LocaleType extends AbstractType
     {
         return 'genemu_jqueryselect2';
     }
+
+    public function getName()
+    {
+        return $this->getBlockPrefix();
+    }
+
 }

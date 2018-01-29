@@ -90,4 +90,5 @@ class Select2EntityType extends AbstractType
     {
         return $this->getBlockPrefix();
     }
+
 }
